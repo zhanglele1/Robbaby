@@ -1,0 +1,90 @@
+//
+//  MeHeader.h
+//  WinTreasure
+//
+//  Created by Apple on 16/6/1.
+//  Copyright © 2016年 linitial. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef void(^MeHeaderSeclectMenuBlock)(NSInteger index);
+typedef void(^MeHeaderBlock)(void);
+typedef void(^MeHeaderBlock)(void);
+
+@interface MeHeader : UIView
+
+@property (nonatomic, copy) MeHeaderBlock headImgBlock;
+
+@property (nonatomic, copy) MeHeaderSeclectMenuBlock menuBlock;
+
+@property (nonatomic, copy) MeHeaderBlock topupBlock;
+
+@property (nonatomic, copy) MeHeaderBlock diamondBlock;
+
+/**余额
+ */
+@property (nonatomic, copy) NSNumber *remainSum;
+
+//- (void)makeScaleForScrollView:(UIScrollView *)scrollView;
+
+@end
+
+
+
+
+
+
+
+@interface VerticalButton :UIButton
+
+
+- (void)setImage:(UIImage *)image
+           title:(NSString *)title
+        forState:(UIControlState)state;
+
+@end
+
+
+
+
+
+
+
+typedef void(^BalanceViewBlock) (void);
+
+@interface BalanceView : UIView
+/**余额
+ */
+@property (nonatomic, strong) YYLabel *balanceLabel;
+
+/**余额数
+ */
+@property (nonatomic, copy) NSNumber *balanceAmount;
+
+@property (nonatomic, copy) BalanceViewBlock topupBlock;
+
+@end
+
+
+
+
+
+
+typedef void(^RecordMenuBlock) (NSInteger index);
+
+@interface RecordMenuView : UIView
+
+@property (nonatomic, copy) RecordMenuBlock clickMenu;
+
+@end
+
+
+
+
+
+
+
+
+
+
